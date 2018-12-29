@@ -55,8 +55,14 @@ int main() {
     if (b < 0) {
         cout << ")";
     }
-    cout << '=' << max;
-
+    cout << '=';
+    if (max < 0) {
+        cout << "(";
+    }
+    cout << max;
+    if (max < 0) {
+        cout << ")";
+    }
     return 0;
 }
 
