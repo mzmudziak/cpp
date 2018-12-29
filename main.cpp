@@ -15,13 +15,11 @@ long ileSkokow(long x, long s) {
     long przeskoczonyDystans = 0;
     long iloscSkokow = 0;
     long skok = s;
-    przeskoczonyDystans = przeskoczonyDystans + s; // konik skacze
-    iloscSkokow = iloscSkokow + 1;
     while (przeskoczonyDystans < x) { // dopóki konik nie przeskoczył drogi
         przeskoczonyDystans = przeskoczonyDystans + skok; // skocz o S
         iloscSkokow = iloscSkokow + 1; // zwieksz liczbę skoków o 1
         if (skok != 1) {
-            skok = floor(s / 2); // konik się zmęczył, więc teraz będzie skakał o połowę krócej
+            skok = floor(skok / 2); // konik się zmęczył, więc teraz będzie skakał o połowę krócej
         }
     }
     return iloscSkokow;
