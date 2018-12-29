@@ -5,18 +5,53 @@ using namespace std;
 
 
 int main() {
-    long n, a;
-    cin >> n;
+    long a, b, max = 0;
+    char znak;
+    bool czyWypisacNIE = false;
+    cin >> a;
+    cin >> b;
+    long dodane = a + b;
+    long odjete = a - b;
+    long pomnozone = a * b;
 
-    for (int i = 0; i < n; i++) {
-        cin >> a;
-        if (a % 2 == 0) {
-            cout << a;
-        } else {
-            cout << a * 2;
-        }
-        cout << " ";
+    if (dodane == odjete) {
+        czyWypisacNIE = true;
     }
+    if (dodane == pomnozone) {
+        czyWypisacNIE = true;
+    }
+    if (odjete == pomnozone) {
+        czyWypisacNIE = true;
+    }
+
+    if (czyWypisacNIE) {
+        cout << "NIE";
+        return 0;
+    }
+    if (dodane > max) {
+        max = dodane;
+        znak = '+';
+    }
+    if (odjete > max) {
+        max = odjete;
+        znak = '-';
+    }
+    if (pomnozone > max) {
+        max = pomnozone;
+        znak = '*';
+    }
+    string bJakoNapis = "";
+
+    cout << a << znak;
+    if (b < 0) {
+        cout << "(";
+    }
+    cout << b;
+    if (b < 0) {
+        cout << ")";
+    }
+    cout << '=' << max;
+
     return 0;
 }
 
