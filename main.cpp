@@ -40,9 +40,14 @@ int main() {
         max = pomnozone;
         znak = '*';
     }
-    string bJakoNapis = "";
-
-    cout << a << znak;
+    if (a < 0) {
+        cout << "(";
+    }
+    cout << a;
+    if (a < 0) {
+        cout << ")";
+    }
+    cout << znak;
     if (b < 0) {
         cout << "(";
     }
