@@ -3,25 +3,23 @@
 
 using namespace std;
 
-long long iloscLizakow(long long n) {
-    /**
-     * Jezeli N to potega 2, to zwracamy potęgę ( x^5 => 5 )
-     * Jezeli N nie jest potega 2, to znajdujemy kolejną potęgę dwójki i powtarzamy krok 1.
-     */
-    if ((ceil(log2(n)) == floor(log2(n)))) {
-        // zwracamy potege 2
-        return static_cast<long long int>(ceil(log2(n)));
-    } else {
-        // N nie jest potęgą dwójki
-        // Znajdź kolejną liczbę która jest potęgą dwójki
-        return static_cast<long long int>(ceil(log(n) / log(2)));
-    }
-}
+
 
 int main() {
-    long long iloscBulek;
-    cin >> iloscBulek;
-    cout << iloscLizakow(iloscBulek);
+    long liczba;
+    long min = 0;
+    long max = 0;
+    for (int i = 0; i < 10; i++) {
+        cin >> liczba;
+        if (liczba < min) {
+            min = liczba;
+        }
+        if (liczba > max) {
+            max = liczba;
+        }
+    }
+    cout << min << endl;
+    cout << max << endl;
     return 0;
 }
 
