@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
     long a, b, max = 0;
-    char znak;
+    char znak = '';
     bool czyWypisacNIE = false;
     cin >> a;
     cin >> b;
