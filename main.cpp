@@ -3,37 +3,13 @@
 
 using namespace std;
 
-long ileSkokow(long x, long s) {
-    /**
-     * Skaczemy pierwszy raz o S
-     * Sprawdzamy, czy przekroczylismy X (Konik przeskoczył drogę)
-     * Jeśli tak - zwracamy ilośc skoków
-     * Jeśli nie, to zmniejszamy długość skoku (konik się męczy) - floor(s / 2)
-     *
-     */
-
-    long przeskoczonyDystans = 0;
-    long iloscSkokow = 0;
-    long skok = s;
-    while (przeskoczonyDystans < x) { // dopóki konik nie przeskoczył drogi
-        przeskoczonyDystans = przeskoczonyDystans + skok; // skocz o S
-        iloscSkokow = iloscSkokow + 1; // zwieksz liczbę skoków o 1
-        skok = floor(skok / 2); // konik się zmęczył, więc teraz będzie skakał o połowę krócej
-        if (skok == 1) {
-            iloscSkokow = iloscSkokow + (x - przeskoczonyDystans);
-            break;
-        }
-    }
-
-    return iloscSkokow;
-}
-
 
 int main() {
-    long x, s;
-    cin >> x;
-    cin >> s;
-    cout << ileSkokow(x, s);
+    long n;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cout << '$';
+    }
     return 0;
 }
 
