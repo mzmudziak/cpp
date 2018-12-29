@@ -5,8 +5,8 @@ using namespace std;
 
 
 int main() {
-    long a, b, max = 0;
-    char znak = '';
+    long a, b, max = -1000000;
+    char znak;
     bool czyWypisacNIE = false;
     cin >> a;
     cin >> b;
