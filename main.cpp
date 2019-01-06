@@ -3,32 +3,21 @@
 
 using namespace std;
 
-long minimum(long a, long b) {
-    return a < b ? a : b;
-}
-
-long minimum(long a, long b, long c) {
-    return minimum(minimum(a, b), c);
-}
-
-long maximum(long a, long b) {
-    return a > b ? a : b;
-}
-
-long maximum(long a, long b, long c) {
-    return maximum(maximum(a, b), c);
-}
-
-
 int main() {
-    long a, b, c;
-    cin >> a >> b >> c;
-    long min = minimum(a, b, c);
-    long max = maximum(a, b, c);
-    long srodek = a +  b + c - min - max;
-    cout << min << " ";
-    cout << srodek << " ";
-    cout << max;
+    long n;
+    cin >> n;
+    long tab[n];
+    for (int i = 0; i < n; i++) {
+        cin >> tab[i];
+    }
+    for (int j = 0; j < n; j++) {
+        long sum = 0;
+        for (int i = 0; i <= j; i++) {
+            sum += tab[i];
+        }
+        cout << sum << " ";
+    }
+
     return 0;
 }
 
