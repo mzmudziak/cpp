@@ -3,24 +3,17 @@
 
 using namespace std;
 
+long maximum(long a, long b) {
+    return a > b ? a : b;
+}
+
 
 int main() {
     long a,b,c;
     cin >> a >> b >> c;
-    if (a > b) {
-        if (a > c) {
-            cout << a;
-        } else {
-            cout << c;
-        }
-    } else {
-        if (b > c) {
-            cout << b;
-        } else {
-            cout << c;
-        }
-    }
+    cout << maximum(maximum(a, b), c);
     return 0;
 }
+
 
 
